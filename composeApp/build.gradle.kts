@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.application)
     alias(libs.plugins.compose)
+    alias(libs.plugins.composeHotReload)
 }
 
 kotlin {
@@ -108,12 +109,16 @@ android {
         minSdk = libs.versions.androidMinSdk.get().toInt()
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
-    kotlin {
-        jvmToolchain(11)
+
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(21))
+        }
     }
+
 }
 
 compose.desktop {

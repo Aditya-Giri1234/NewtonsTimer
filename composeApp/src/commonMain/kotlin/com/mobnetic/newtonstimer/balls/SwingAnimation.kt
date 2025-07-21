@@ -92,6 +92,6 @@ class SwingAnimation(maxAngle: Float) {
             -SWING_ANGLE_AFTER_BEING_HIT_MULTIPLIER / 4f
         const val SWING_ADDITIONAL_BOUNCE_BETWEEN_BALLS_MULTIPLIER = 0.3f
         const val MILLIS_UNTIL_HIT = CYCLE_DURATION_MILLIS / 2
-        val SWING_EASING = CubicBezierEasing(0.7f, 0f, 0.3f, 1f)
+        val SWING_EASING = CubicBezierEasing(0.9f, 0.5f, 0.7f, .2f)
     }
 }

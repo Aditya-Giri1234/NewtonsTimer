@@ -12,6 +12,7 @@ fun main() {
     application {
         Window(
             onCloseRequest = ::exitApplication,
+            alwaysOnTop = true,
             title = stringResource(Res.string.app_name)
         ) {
             App()
